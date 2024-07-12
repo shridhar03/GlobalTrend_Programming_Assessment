@@ -1,0 +1,16 @@
+function areAnagrams(str1, str2) {
+  function sortString(str) {
+    return str.toLowerCase().split('').sort().join('');
+  }
+
+  const sortedStr1 = sortString(str1.replace(/[^a-z0-9]/gi, ''));
+  const sortedStr2 = sortString(str2.replace(/[^a-z0-9]/gi, ''));
+
+  return sortedStr1 === sortedStr2;
+}
+
+console.log(areAnagrams("listen", "silent")); 
+console.log(areAnagrams("hello", "billion")); 
+console.log(areAnagrams("Dormitory", "Dirty room")); 
+console.log(areAnagrams("School master", "The classroom")); 
+
